@@ -1,0 +1,322 @@
+.dot {
+  height: 1000px !important;
+  width: 1000px !important;
+  background-image: radial-gradient(closest-side, #6d69ae, var(--background));
+  position: absolute;
+  top: -570px;
+  left: 25%;
+}
+
+.loader {
+  width: 175px;
+  height: 80px;
+  display: block;
+  margin: auto;
+  background-image: radial-gradient(
+      circle 25px at 25px 25px,
+      #fff 100%,
+      transparent 0
+    ),
+    radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0),
+    radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
+    linear-gradient(#fff 50px, transparent 0);
+  background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+  background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.loader::before {
+  content: "";
+  left: 60px;
+  bottom: 18px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #9d98cd;
+  background-image: radial-gradient(
+      circle 8px at 18px 18px,
+      #fff 100%,
+      transparent 0
+    ),
+    radial-gradient(circle 4px at 18px 0px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 0px 18px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 36px 18px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 18px 36px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 30px 5px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 30px 5px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 30px 30px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 5px 30px, #fff 100%, transparent 0),
+    radial-gradient(circle 4px at 5px 5px, #fff 100%, transparent 0);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: rotationBack 3s linear infinite;
+}
+.loader::after {
+  content: "";
+  left: 94px;
+  bottom: 15px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9d98cd;
+  background-image: radial-gradient(
+      circle 5px at 12px 12px,
+      #fff 100%,
+      transparent 0
+    ),
+    radial-gradient(circle 2.5px at 12px 0px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 0px 12px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 24px 12px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 12px 24px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 20px 3px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 20px 3px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 20px 20px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 3px 20px, #fff 100%, transparent 0),
+    radial-gradient(circle 2.5px at 3px 3px, #fff 100%, transparent 0);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: rotationBack 4s linear infinite reverse;
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.navbar-item {
+  font-family: main-font-medium, Arial;
+  font-size: 18px !important;
+  border: solid 1px #95a5a6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: var(--text);
+  height: 32px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.navbar-item:hover {
+  background-color: var(--btn);
+}
+.logo {
+  width: fit-content;
+  font-size: 34px;
+  font-family: custom-font-title, Arial;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  /* font-family: custom-font-title, Arial; */
+  font-family: font-for-read-10;
+  font-weight: 600;
+  font-style: normal;
+  width: 100%;
+  font-size: 20px;
+  background-color: var(--background);
+  color: var(--text);
+  position: relative;
+  margin-top: auto;
+}
+.main-all-books {
+  background-image: url("/back2.svg");
+  background-size: 100%;
+  padding-top: 40px;
+}
+.book {
+  background: rgba(221, 220, 237, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  min-height: 190px;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  background-image: url("/back1.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.read-btn {
+  background-color: var(--secondary);
+  border-radius: 8px;
+  color: var(--text) !important;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: main-font-light, Arial;
+  padding: 8px 32px;
+  font-weight: 600;
+  margin: 0px auto;
+  width: 165px;
+  transition: transform 0.5s ease;
+  display: flex !important;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.read-btn:hover {
+  transform: scale(1.05);
+  background-color: #aea9d6;
+}
+
+.book-container {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+}
+.top-box {
+  display: flex;
+}
+
+.add-fb2-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.info-box {
+  padding: 20px 50px;
+  margin: 0px auto;
+}
+.book-author {
+  margin: 20px 0px;
+  text-align: center;
+  font-family: main-font-medium, Arial;
+}
+.book-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: main-font-light, Arial;
+}
+.main-add-books {
+  margin-top: 100px;
+}
+
+.add-box {
+  background: rgba(221, 220, 237, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  min-height: 500px;
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 5px dashed #6d69ae;
+}
+
+.custom-input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 999;
+}
+.custom-input-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: main-font-medium, Arial;
+  font-size: 40px;
+  text-align: center;
+}
+@media only screen and (max-width: 1400px) {
+  .dot {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar-item {
+    font-size: 14px !important;
+  }
+  .footer {
+    font-size: 16px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  .read-btn {
+    font-size: 14px;
+    width: 135px;
+  }
+  .book-title {
+    font-size: 20px;
+  }
+  .book-author {
+    font-size: 14px;
+  }
+  .book {
+    width: 400px;
+  }
+  .add-box {
+    width: 80vw;
+  }
+  .custom-input-info {
+    font-size: 30px;
+  }
+  .main-all-books {
+    background: var(--background);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .navbar-item {
+    font-size: 8px !important;
+    height: 30px;
+    padding: 3px 6px;
+  }
+  .footer {
+    font-size: 10px;
+  }
+  .logo {
+    font-size: 10px;
+  }
+  .read-btn {
+    font-size: 10px;
+    width: 65px;
+  }
+  .book-title {
+    font-size: 12px;
+  }
+  .book-author {
+    font-size: 10px;
+  }
+  .book {
+    width: 300px;
+  }
+  .iwilllosenavbar {
+    height: 40px !important;
+  }
+  .custom-input-info {
+    font-size: 20px;
+  }
+  .main-all-books {
+    background: var(--background);
+  }
+}

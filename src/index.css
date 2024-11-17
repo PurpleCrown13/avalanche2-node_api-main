@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: custom-font-title;
+  src: url("/LEPKA.woff") format("woff");
+}
+
+@font-face {
+  font-family: main-font-light;
+  src: url("/ComicHelvetic_Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: main-font-medium;
+  src: url("/ComicHelvetic_Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: font-for-read-1;
+  src: url("/gteestiprodisplay_regular.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-2;
+  src: url("/Attractive-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-3;
+  src: url("/VremenaGroteskBook.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-4;
+  src: url("/FantasqueSansMono-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-5;
+  src: url("/hkgrotesk-medium-web.woff") format("woff");
+}
+
+@font-face {
+  font-family: font-for-read-6;
+  src: url("/Synco-Cyrillic.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-7;
+  src: url("/MorningBreeze.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-8;
+  src: url("/MV-Crooker.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-9;
+  src: url("/Veles-Bold.0.9.2.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-10;
+  src: url("/JetBrains.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-11;
+  src: url("/Tenada.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-12;
+  src: url("/Kornilow.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-13;
+  src: url("/AvenirNextCyr-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-14;
+  src: url("/Arvo-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-15;
+  src: url("/Rainsuit.woff") format("woff");
+}
+@font-face {
+  font-family: font-for-read-16;
+  src: url("/ALS_Sirius_Regular_0.95.woff") format("woff");
+}
+* {
+  --text: #08080e;
+  --background: #fff;
+  --primary: #6d69ae;
+  --secondary: #9d98cd;
+  --accent: #bc8a83;
+  --btn: #dddced;
+  --blue-theme-text: #040e05;
+  --blue-theme-background: #d0e5ff;
+  --khaki-theme-text: #040e05;
+  --khaki-theme-background: #c3b091;
+  --brown-theme-text: #0c0a06;
+  --brown-theme-background: #e5cf9d;
+  --pale-theme-text: #0c0a06;
+  --pale-theme-background: #e5dcc8;
+  --dgrey-theme-text: #eef2fa;
+  --dgrey-theme-background: #18181a;
+  --lgrey-theme-text: #222;
+  --lgrey-theme-background: #eeeff5;
+  --sith-theme-text: #999999;
+  --sith-theme-background: #050505;
+  --grey-theme-text: #111;
+  --grey-theme-background: #d8dada;
+  --grey2-theme-text: #222;
+  --grey2-theme-background: #e1e2e7;
+  --avalanche-theme-text: #040e05;
+  --avalanche-theme-background: #dddced;
+  --green-theme-text: #111;
+  --green-theme-background: #dce5e2;
+  --dark-theme-text: #f8f0f2;
+  --dark-theme-background: #161616;
+  --black-theme-text: #f3f3f2;
+  --black-theme-background: #09090b;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+}
