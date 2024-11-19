@@ -194,14 +194,20 @@ function ReadTwoColumns() {
         }
         const sections = xmlDoc.getElementsByTagName("section");
         const chapters = [];
+        let chapterNumber = 1;
+
         if (sections) {
           for (let i = 0; i < sections.length; i++) {
             const section = sections[i];
+            const hasNestedSections =
+              section.getElementsByTagName("section").length > 0;
+
+            // Если текущий <section> является контейнером (например, "Part I"), пропускаем его
+            if (hasNestedSections) {
+              continue;
+            }
             const title = section.getElementsByTagName("title")[0];
-            const chapterNumber = i + 1;
-            const chapterTitle = title
-              ? title.textContent.trim()
-              : `Chapter ${chapterNumber}`;
+            const chapterTitle = title ? title.textContent.trim() : ``;
 
             // Извлекаем параграфы, исключая <title> теги
             const paragraphs = Array.from(section.getElementsByTagName("p"))
@@ -229,6 +235,7 @@ function ReadTwoColumns() {
               title: chapterTitle,
               content: contentWithImages,
             });
+            chapterNumber++;
           }
           setBookChapters(chapters);
         }
@@ -375,7 +382,7 @@ function ReadTwoColumns() {
                       selectedChapter === index ? "current-chapter" : ""
                     }`}
                   >
-                    ({chapter.number}) {chapter.title}
+                    {chapter.title} ({chapter.number})
                   </Button>
                 </li>
               ))}

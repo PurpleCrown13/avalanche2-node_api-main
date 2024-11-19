@@ -129,23 +129,15 @@ function Read() {
         const xmlDoc = parser.parseFromString(fb2Text, "text/xml");
         const sections = xmlDoc.getElementsByTagName("section");
         const chapters = [];
-        let chapterNumber = 1;
 
         if (sections) {
           for (let i = 0; i < sections.length; i++) {
             const section = sections[i];
-            const hasNestedSections =
-              section.getElementsByTagName("section").length > 0;
-
-            // Если текущий <section> является контейнером (например, "Part I"), пропускаем его
-            if (hasNestedSections) {
-              continue;
-            }
             const titleElement = section.getElementsByTagName("title")[0];
-
+            const chapterNumber = i + 1;
             const chapterTitle = titleElement
               ? titleElement.textContent.trim()
-              : ``;
+              : `Chapter ${chapterNumber}`;
 
             // Проходим по каждому параграфу в текущей главе и исключаем <title> теги
             const paragraphs = Array.from(section.getElementsByTagName("p"))
@@ -159,7 +151,6 @@ function Read() {
               title: chapterTitle,
               content: chapterContent,
             });
-            chapterNumber++;
           }
           setBookChapters(chapters);
         }
@@ -574,7 +565,7 @@ function Read() {
                           selectedChapter === index ? "current-chapter" : ""
                         }`}
                       >
-                        {chapter.title} ({chapter.number})
+                        ({chapter.number}) {chapter.title}
                       </Button>
                     </li>
                   ))}
